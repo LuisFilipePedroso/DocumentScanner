@@ -32,6 +32,25 @@ struct IntroScreen: View {
         }
         .padding(15)
     }
+    
+    @ViewBuilder
+    private func PointView(title: String, image: String, description: String) -> some View {
+        HStack(spacing: 16) {
+            Image(systemName: image)
+                .font(.largeTitle)
+                .foregroundStyle(.purple)
+            
+            VStack(alignment: .leading, spacing: 6) {
+               Text(title)
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                
+                Text(description)
+                    .font(.callout)
+                    .foregroundStyle(.gray)
+            }
+        }
+    }
 }
 
 #Preview {
