@@ -18,6 +18,27 @@ struct IntroScreen: View {
                 .padding(.top, 64)
                 .padding(.bottom, 32)
             
+            VStack(alignment: .leading, spacing: 24) {
+                PointView(
+                    title: "Scan Documents",
+                    image: "scanner",
+                    description: "Scan any document with ease"
+                )
+                PointView(
+                     title: "Save Documents",
+                     image: "tray.full.fill",
+                     description: "Persist scanned documents with the new SwiftData Model."
+                )
+                PointView(
+                    title: "Lock Documents",
+                    image: "faceid",
+                    description: "Protect your documents so that only you can Unlock them using FaceID."
+                )
+            }
+            .padding(.horizontal, 24)
+            
+            Spacer(minLength: 0)
+            
             Button {
                 showIntroView = false
             } label: {
