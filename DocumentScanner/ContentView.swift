@@ -13,10 +13,12 @@ struct ContentView: View {
     
     var body: some View {
         HomeScreen()
-            .sheet(isPresented: $showIntroView) {
+           .preferredColorScheme(.light)
+           .sheet(isPresented: $showIntroView) {
                 IntroScreen()
                     .interactiveDismissDisabled()
             }
+            
     }
 
 }
