@@ -39,8 +39,8 @@ extension View {
                 .animation(snappy, value: status.wrappedValue)
             }
     }
-    
-    var snappy: Animation {
-        .snappy(duration: 0.25, extraBounce: 0)
-    }
+}
+
+var snappy: Animation {
+    .snappy(duration: 0.25, extraBounce: 0)
 }
